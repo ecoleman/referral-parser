@@ -3,7 +3,9 @@
   "version": "0.0.9",
   "description": "Parse a referral url into useful information",
   "main": "index.js",
+  "module": "es/referral-parser.js",
   "scripts": {
+    "build:es": "cross-env BABEL_ENV=es babel lib -o es/index.js",
     "test": "mocha",
     "update": "node ./generate/createCore.js",
     "bump": "npm version patch -m 'version bump' && git push && npm publish"
@@ -28,7 +30,12 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-es2015-classes": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "chai": "^3.5.0",
+    "cross-env": "^5.0.5",
     "js-yaml": "^3.6.1",
     "mocha": "^3.1.1",
     "request": "^2.75.0"

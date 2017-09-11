@@ -1,0 +1,14 @@
+{
+  "plugins": [
+    ["transform-es2015-classes", { "loose": true }]
+  ],
+  "env": {
+    "commonjs": {
+      "plugins": [
+        ["transform-es2015-modules-commonjs", { "loose": true }]
+      ]
+    },
+    "es": {
+    }
+  }
+}
